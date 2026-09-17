@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scalelink-config
+  namespace: scalelink
+  labels:
+    app.kubernetes.io/part-of: scalelink
+data:
+  APP_ENV: kubernetes
+  LOG_LEVEL: INFO
+  POSTGRES_HOST: scalelink-postgres
+  POSTGRES_PORT: "5432"
+  ANALYTICS_SERVICE_URL: http://scalelink-analytics:8001
+  LINK_SERVICE_PORT: "8000"
+  ANALYTICS_SERVICE_PORT: "8001"

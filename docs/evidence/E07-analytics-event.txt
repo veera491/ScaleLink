@@ -1,0 +1,17 @@
+E07 - Analytics event
+=====================
+
+Redirected Link ID: 10
+Short code: uepq8Y
+
+Analytics table: click_events
+Row count before redirect: 51
+Row count after redirect: 52
+
+Table columns:
+id:bigint link_id:bigint clicked_at:timestamp with time zone referrer:text user_agent:character varying
+
+Latest rows:
+14|10|2026-09-16 20:02:45.064863+00|https://evidence.example/|other 3|1|2026-09-16 17:21:20.139551+00||other 2|1|2026-09-16 17:21:20.056063+00||other 1|1|2026-09-16 17:21:20.007841+00||other
+
+The Analytics table gained a row immediately after the redirect.

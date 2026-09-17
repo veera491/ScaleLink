@@ -1,0 +1,20 @@
+E05 - Short URL creation
+========================
+
+POST /api/links -> HTTP 201
+
+ID: 10
+Short code: uepq8Y
+Target URL: https://example.com/scalelink-phase17-evidence-1789588963
+
+API response:
+{
+    "id":  10,
+    "short_code":  "uepq8Y",
+    "target_url":  "https://example.com/scalelink-phase17-evidence-1789588963",
+    "public_url":  "http://scalelink-link:8000/r/uepq8Y",
+    "created_at":  "2026-09-16T20:02:44.481388Z"
+}
+
+PostgreSQL row:
+1

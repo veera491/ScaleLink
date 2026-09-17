@@ -1,0 +1,15 @@
+E08 - Link -> Analytics REST logs
+=================================
+
+Test short code: uepq8Y
+
+Link service Analytics configuration:
+ANALYTICS_SERVICE_URL=<configured by reference>
+
+Relevant Link Service logs:
+2026-09-16 20:02:45,070 INFO httpx HTTP Request: POST http://scalelink-analytics:8001/api/events "HTTP/1.1 201 Created" INFO:     10.244.0.1:25760 - "GET /r/uepq8Y HTTP/1.1" 307 Temporary Redirect
+
+Relevant Analytics Service logs:
+INFO:     10.244.0.20:39444 - "POST /api/events HTTP/1.1" 201 Created
+
+The redirect request was handled by Link Service and Analytics logged a POST to /api/events.

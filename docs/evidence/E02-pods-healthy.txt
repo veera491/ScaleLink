@@ -1,0 +1,9 @@
+E02 - All pods healthy
+======================
+
+NAME                                   READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+scalelink-analytics-65bf696cb5-b7nkp   1/1     Running   0          33m   10.244.0.21   minikube   <none>           <none>
+scalelink-link-6cc5bf457d-brx6c        1/1     Running   0          33m   10.244.0.20   minikube   <none>           <none>
+scalelink-postgres-0                   1/1     Running   0          33m   10.244.0.22   minikube   <none>           <none>
+
+All ScaleLink pods were Running and Ready at capture time.

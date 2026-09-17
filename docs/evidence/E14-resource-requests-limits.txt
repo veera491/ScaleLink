@@ -1,0 +1,27 @@
+E14 - Resource requests and limits
+==================================
+
+deployment/scalelink-link
+  CPU request    : 100m
+  CPU limit      : 500m
+  Memory request : 128Mi
+  Memory limit   : 256Mi
+
+deployment/scalelink-analytics
+  CPU request    : 100m
+  CPU limit      : 500m
+  Memory request : 128Mi
+  Memory limit   : 256Mi
+
+statefulset/scalelink-postgres
+  CPU request    : 100m
+  CPU limit      : 500m
+  Memory request : 256Mi
+  Memory limit   : 512Mi
+
+Observed pod usage:
+
+NAME                                   CPU(cores)   MEMORY(bytes)   
+scalelink-analytics-65bf696cb5-b7nkp   3m           40Mi            
+scalelink-link-6cc5bf457d-brx6c        4m           45Mi            
+scalelink-postgres-0                   8m           20Mi            

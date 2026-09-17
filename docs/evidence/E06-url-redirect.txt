@@ -1,0 +1,13 @@
+E06 - URL redirect
+==================
+
+Request:
+GET /r/uepq8Y
+
+STATUS=307
+LOCATION=https://example.com/scalelink-phase17-evidence-1789588963
+
+Expected target:
+https://example.com/scalelink-phase17-evidence-1789588963
+
+Result: HTTP 307 redirect succeeded.

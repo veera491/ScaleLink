@@ -1,0 +1,29 @@
+E11 - Link independent scaling
+==============================
+
+Required topology:
+Link=3 Analytics=1 PostgreSQL=1
+
+Deployments:
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+scalelink-analytics   1/1     1            1           3h5m
+scalelink-link        3/3     3            3           3h15m
+
+Pods:
+NAME                                   READY   STATUS    RESTARTS   AGE    IP            NODE       NOMINATED NODE   READINESS GATES
+scalelink-analytics-65bf696cb5-b7nkp   1/1     Running   0          41m    10.244.0.21   minikube   <none>           <none>
+scalelink-link-6cc5bf457d-2fzbr        1/1     Running   0          11s    10.244.0.31   minikube   <none>           <none>
+scalelink-link-6cc5bf457d-9qdh5        1/1     Running   0          11s    10.244.0.30   minikube   <none>           <none>
+scalelink-link-6cc5bf457d-brx6c        1/1     Running   0          41m    10.244.0.20   minikube   <none>           <none>
+scalelink-postgres-0                   1/1     Running   0          102s   10.244.0.29   minikube   <none>           <none>
+
+Link Service endpoints:
+NAME                   ADDRESSTYPE   PORTS   ENDPOINTS                             AGE
+scalelink-link-x766q   IPv4          8000    10.244.0.20,10.244.0.30,10.244.0.31   3h
+
+Application verification:
+SHORT_CODE=OXga8Z REDIRECT_STATUS=307 REDIRECT_LOCATION=https://example.com/scalelink-phase17-e11 APPLICATION_TEST=PASS
+
+Result:
+Link independently scaled from 1 to 3 while Analytics remained at 1.
+The application continued to create and redirect short URLs.
